@@ -1,0 +1,82 @@
+{
+  "created": "2026-10-10",
+  "implementation_source": "Density-guided collaborative enhancement for UAV road infrared small-object detection; current supplied manuscript",
+  "source_status": "Supplied GMC files preserved byte-for-byte; the other two modules are reference reconstructions, not recovered experiment code.",
+  "verification": {
+    "python": "3.10.14",
+    "torch": "2.7.1+cu128",
+    "numpy": "2.2.6",
+    "pillow": "11.3.0",
+    "checks": [
+      "CPU composed modules forward/backward",
+      "CUDA float16 autocast forward/backward",
+      "deterministic eval and state_dict round-trip",
+      "supplied 3x3 and 5x5 counter outputs/loss/gradients",
+      "synthetic GMC CLI one-epoch train/save/load/collage",
+      "original file hashes unchanged"
+    ],
+    "paper_detection_metrics_reproduced": false
+  },
+  "files": [
+    {
+      "file": "examples/check_modules.py",
+      "origin": "new supporting code or documentation",
+      "sha256": "ca7de8df3ecb9324988669869d57d4252a605689b48b40cc3ddd72c955a505e4"
+    },
+    {
+      "file": "examples/train_gmc.py",
+      "origin": "new supporting code or documentation",
+      "sha256": "f9c489969a4bfcd9c5e5c175ec973478b48f87786fc9b1346cc2255a86c4e332"
+    },
+    {
+      "file": "gmc/__init__.py",
+      "origin": "new supporting code or documentation",
+      "sha256": "3125f35ef71bac53f3ccfedfda03c0d536e918e92937bf8aaf3bc959c861d987"
+    },
+    {
+      "file": "gmc/grid_matrix_counter.py",
+      "origin": "dependency imported by both user-supplied scripts",
+      "sha256": "c62d954564cade24213f56822125bb05a84dd64864900c05c3315082426ac619"
+    },
+    {
+      "file": "gmc/run_grid_matrix_counter_direct.py",
+      "origin": "user-supplied source",
+      "sha256": "0bfed85c70d23dde75016684ce1aa2fde7d9d7a050999cae079fa6df365c6857"
+    },
+    {
+      "file": "gmc/yolo_matrix_collage.py",
+      "origin": "user-supplied source",
+      "sha256": "1d307bbf59f0514ac8a3801b9f5f86765f415c3d14273ed3fb1049c7859b03f4"
+    },
+    {
+      "file": "modules/__init__.py",
+      "origin": "new supporting code or documentation",
+      "sha256": "53fe184f9f8571364a43e510ad927bf3d9da40a41f18a0c70e2a228eacceb814"
+    },
+    {
+      "file": "modules/c3k2_gf.py",
+      "origin": "new reference implementation reconstructed from the supplied manuscript",
+      "sha256": "e567eca183ebd3747b686277eaebd2994ee06d163d740f676915820304bebf86"
+    },
+    {
+      "file": "modules/common.py",
+      "origin": "new supporting code or documentation",
+      "sha256": "0195f440708c2f59fdeacda436a81ca26225d1d2585fba441d02b2c6a86fe4bd"
+    },
+    {
+      "file": "modules/td_cfem.py",
+      "origin": "new reference implementation reconstructed from the supplied manuscript",
+      "sha256": "98883948ad3a5c6496baef9c9a71760bf436f982ed3a37ba7534ad10485ec1f9"
+    },
+    {
+      "file": "README.md",
+      "origin": "new supporting code or documentation",
+      "sha256": "24ee1039b892c684bc521405d04e6a442604fa5ecec3b6c71c2f2045bf36c4f7"
+    },
+    {
+      "file": "requirements.txt",
+      "origin": "new supporting code or documentation",
+      "sha256": "07e1f2ea191c4c38a37301f23288bac5bcf23cb7fff43f56e257247427e0405b"
+    }
+  ]
+}
